@@ -1,0 +1,897 @@
+--------------------------------------MODULOHTML---------------------------------------------
+
+--------------------------BASICO---------------------------
+
+<head> link:favicon </head> para inserir o icone da pagina
+
+<h1>texto</h1> titulo  (somente de h1-h6)                       OBS EMOJIS: https://emojipedia.org/
+
+<hr> linha horizontal                                        	           IMG. PNG X JPEG ( png transparente qualidade um pouco melhor // jpeg compactação, qualidade um pouco menor )
+
+<p>texto</p>   paragrafo				           CTRL + SHIFT + P ( comando emmet )
+
+<br>  quebra de linha  (breakroll)				FORMA --> CSS /// SENTIDO -- >  HTML
+
+<img src="" alt=""> colocar imagem 			LOREM
+
+-----------------------SEMANTICA--------------------------
+
+<strong>txt</strong>       negrito
+
+<em>txt</em>       itálico
+
+<small> texto pequeno
+
+<del> texto excluido
+
+<ins> texto inserido(sublinhado)
+
+<sup> para textos sobrescritos
+
+<sub> para textos subescritos
+
+<mark> para fazer uma marcação
+
+<abbr title="txt"> para abreviações que quando colocado o cursor em cima da palavra 
+ira demonstrar ela por extensa
+
+<code> fonte monoespaçada geralmente utilizada para demonstrar codigos
+
+tag <pre> considera os espaços digitados para nao ter que usar br varias vezes
+
+tag <blockquote> faz citações em blocos e <q> citações simples
+
+alem de pode colar a origem do site em url como: <blockquote cite="URL">  ---> para os mecanismos de busca
+
+--------------------------LISTAS------------------------------
+
+<ol>  <!--ordened list obrigatorio!--> outra opção -> <ol type = "1" start="1" > ou seja tipo da numeração e onde começara a contagem
+
+<Li>txt(</li>opc) para fazer listas numeradas sendo obrigatorio estar dentro do ol
+
+</ol>
+
+<ul>        |
+	   | 
+<Li>       |        para listas nao ordenas  ( outros types -> circle and square / o padrao é o disc)
+              |
+</ul>     |
+
+<dl>     lista de definição		
+
+	<dt>txt</dt>                  termo que vai ser definido
+	<dd>txt</dd>		  descrição
+
+</dl>
+
+-----------------------------LINKS------------------------------
+
+link externos													OBS: CASO QUEIRA COLOCAR UM LINK NAO PATROCINAVEL OU NAO CONFIAVEL USAR A REL="NOFOLLOW" para o mecanismo de busca google identificar
+
+<a href="URL">txt que ira ser ancorado </a> para uma palavra ser linkada
+
+<a href="URL" target="_blank" rel="external">txt que ira ser ancorado </a> para que seu link seja aberto em outra aba externa (indicado para levar o usarios para sites que não sao de sua posse)
+
+o target seria como a trajetorio = nova janela em branco(_blank) e rel seria como relativo a externo(external)
+
+links internos													OBS: CASO QUEIRA INDICAR QUE É PARA A PROPRIA PAGINA PARA ALGUM MOTIVO COLOCAR O TARGET="_SELF"
+
+<a href="CTRL+SPAÇO" rel="next ou prev">texto que sera linkado</a> para ir para um pagina do meu proprio site
+desde que o link esteja dentro do arquivo e rel para a questão semantica para os mecanimos de busca saberem que é a pagina a pos e a anterior
+
+--------------------------
+DOWNLOAD 
+
+caso a pagina estaja em um arquivo anterior colocar ../nome.html caso esteja dois arquivos antes colocar../../ e assim sucessivamente e levar do rel prev ou next
+
+<a> href="local do arquivo" download="titulo do arquivo" type="codigo do arquivo junto com seu codigo"    para download de arquivos
+
+ex.<a href="testando/harrypoter.png" download="harrypotter.png" type="image/png">txt que sera linkado</a>
+
+------------------IMAGENS DINÂMICAS------------------
+
+<picture> 
+
+
+<source media="(max weidght: quantidade.emPX)" srcset="local da imagem" type="image/tipo">                              source:media:type   para colocar imagens que diminuem confirme a resolução maxima indicada
+
+img src="colocar a maior imagem"
+
+</picture
+
+---------------------------AUDIO------------------------------
+
+<audio> ou <audio control || autoplay || PRELOAD = metadata> 
+	
+	<source src="local do arquivo" type="audio/tipo"
+
+</audio>
+
+o control mostra os controles
+preload é pra o quanto sera carregado
+o loop reinicia o audio
+o autoplay é pra começar a tocar assim que entra no site
+
+---------------------------VIDEO------------------------------					obs:m4v mais recomendado : type="video/mp4" /// posso incorporar videos do yt e vimeo com o codigo no compartilhamento
+
+<video width="" poster="" controls>  largura e capa do video e controles
+
+	<source src="" type="">
+
+</videos>
+
+controls p mostrar os controles tbm
+width largura do video
+type tipo do arquivo sempre especificar que nem os audios e fotos
+
+pra cada tipo de video colocar um source para navegadores diferentes (isso no caso de hospedar os videos no propio site)
+
+colocar um <p> dizendo seu  navegador nao tem combatibilidaded pra caso nao tenha compatibilidade com nenhum
+
+isso tudo dentro da tag videos
+
+-------------------------------------------------------
+
+--------------------------------------FIM---------------------------------------------
+
+--------------------------------------MODULOCSS01---------------------------------------------
+
+style.css
+
+*{ }   -      configurações globais das css								
+OBS: se tiver muito texto, fazer a pagina tradicional, fundo branco letra preta, caso contrario pode fazer fundo preto letra branca
+
+@charset "UTF-8" ;
+
+background image linear/x gradrient     -        para fazer um degrade na pagina [
+
+     *{
+            height: 100%;                                       ---------------->  esse * significa config global
+        }
+
+        body{
+            background-image: linear-gradient(-180deg, rgb(152, 242, 203) 60%, rgba(108, 250, 255, 0.904) );
+        }
+
+vai fazer um degrade de cima para baixo por causa do -180 deg, e apos isso 
+tem as cores e suas %
+
+]
+-------- // ---------
+--------------------------------------
+
+FONTES
+
+--------------------------------------
+
+tamanho da fonte:
+
+font-size
+
+lembrando no font-size, usar geralmente as medidas "px"(pixel) e "em"  1 em geralmente equivale a 16 pixels
+
+familia da fonte:
+
+font-family: Arial, serif;
+
+-------------------------------------
+
+pesos da fonte:
+
+font-weight: normal;   ---- > pode ser lighter normal bold bolder ( é peso muda tipo o negrito)
+
+--------------------------------------
+
+estilo da fonte:
+font-style: italic;
+
+--------------------------------------
+
+sublinhado
+text-decoration: underline;
+
+--------------------------------------
+
+espaçamento entre linhas:
+line-height: 2em;
+
+--------------------------------------
+
+primeiras letras maiores;
+font-variant: small caps;
+
+--------------------------------------
+
+shorthand para fontes --- >>>    
+
+font: italic bolder 3em 'Arial', serif;
+
+ordem é
+
+font-style -> font-weight -> font-size -> font-family
+
+-------- // ---------
+--------------------------------------
+
+text-align: center;   ----> alinhamento do texto
+
+text-indent:20px;  -------> para dar o espaçamento nescessario de começo de paragrafo.
+
+text-shadow: 1px 1px 2px cor;
+
+--------------------------------------
+-------- // ---------
+
+ID E CLASS
+
+se eu quiser por exemplo um h1 com um estilo diferente dos outros h1 eu utilizo o ID, por exemplo:
+
+<h1 id="principal>
+
+ai na pagina do css ficaria
+
+h1{
+	color: red;
+	}		
+
+h1#principal{
+	color:blue;
+	}
+
+OBS: tudo que em Html é id em css é #
+	
+	tudo que em Html é class em css é .
+
+
+se eu quiser, por exemplo, mais de um h2 com um estilo diferente dos outros h2 eu utilizo o Class, por exemplo:
+
+<h2 class = "intermediario">
+
+ai na pagina do css ficaria
+
+.destaque {
+		backgroundcolor: yellow;
+			
+			}
+ai qualquer elemento que eu colocar a class intermediario vai ficar verde
+
+lembrando não dar o nome da classe pela forma e sim pela funcionalidade, fica melhor para a compreensão
+
+e da para colocar em um mesmo elemento um id e um class, e o id sobrepoe o class.
+
+-------- // ---------
+--------------------------------------
+
+PSEUDO-CLASSES    olhar ex 004 para olhar o sinal > children
+
+: ---> são uma pseudo-classes
+
+as pseudo-classes tem que estar relacionadas a um elemento ou a uma classe
+
+pseduo-classes são relacionadas a o estado de um determinado elemento
+
+por ex o  hover      ----> quando passsar o mouse por cima
+
+div:hover  {
+		background-color:yellow
+}
+
+passando o mouse por cima vai mudar o estado da div, ela ficara amarela.
+--------------------------------------
+
+outras pseudo-classes
+
+visited --- >> se um elemento ja foi visitado exemplo:
+
+a:visited {
+	color: blue;
+	  }
+
+active  --- >> ao clicar no elemento exemplo
+
+a:activer {
+	      color: red
+	      background-color: bluer;
+	    }
+
+exemplo total
+
+a {
+	color: blue;
+	text-decoretion: none;   -- >> p tirar o sublinhado
+}
+
+a:visited {
+		color: purple;
+	  }
+
+a:active {
+		color:pink;	
+	    }
+a:hover {	
+		text-decoration: underline;
+		}
+
+--------------------------------------
+
+PSEUDO-ELEMENTOS
+
+:: ----- >> pseudo elementos
+
+mexer no conteudo, funcionado para classes e id
+
+exemplo 
+
+a::after {
+	content: 'link'
+	}
+a::before{
+	content: 'link'
+	}
+
+o before e o after servem para colocar alguma coisa antes ou depois do elemento
+
+boderia da uma classe para um link especifico tipo especial e usar um  pseudo-elemento. exemplo
+
+<a class = "especial">
+
+.especial::after {
+		content: 'link'
+		}
+
+--------------------------------------
+
+
+Modelo de caixas
+
+altura e largura
+
+heigh
+
+width
+
+espaço entre borda e counteudo se configurado --> padding
+
+border  ---- >> borda em volta
+
+entre a borda e margem (contorno) --->>> outline 
+
+borda pra fora = margem  --- >>> margin
+
+***heighXwidth ---> padding ----> border ----> outline -----> margin***
+
+----------------------------------------------
+
+box-level  ---> pra criar caixa na prox linha
+<div>
+
+inline-level --> pra criar caixa na mesma linha
+<span>
+
+heighXwidth < padding < border < outline < margin
+
+	height: 300px;
+            width: 300px;
+
+	border: 10px solid grey;          ---> o solid pra poder pegar a cor
+
+	padding: 10px;     /* ->> sentido relogio 
+
+	outline: 5px solid salmon;
+
+	margin: auto;
+
+margin sentido religio tbm se quiser definir os px e o auto centraliza
+
+olhar ex007
+
+pra transformar o block em in-line ou vise versa
+
+display: block; ou display: inline;
+
+quando colocar inline nao da para colocar o height e width (altura e largura)
+
+--------------------------------------
+
+SOMBRAS      --->  OLHAR NO DEV TOOLS 
+
+box shadow: 1px 1px 1px black;
+
+desloc horizontal, desloc vertical, espalhamento, cor
+
+----------------------------------------
+
+ARREDONDAMENTO DAS BORDAS
+
+border-radius: px;
+
+para cada calado no sentido horario
+
+border-radius: px px px px;
+
+----------------------------------------
+
+LISTAS
+
+2 COLUNAS ex.:
+columns: 2
+
+vai dividir uma ul ou ol em 2 colunas
+
+-------------------------------------------
+
+RESPONSIVIDADE
+
+min width: 280px;
+
+max width:   px;
+
+para ajustar uma margem minina e uma maxima de alguma div para caber em telas menores e em telas maiores nao ficar muito esticado.
+
+
+
+img{
+	width: 100%
+}
+
+para a imagem se ajustar conforme o tamanho da tela
+
+-------------------------------------------
+
+DECLARÇÃO DE VARIAVEIS
+
+:root{
+	--cor1: #3d4a5b;
+}
+
+exemplo acima o nome da variavel é cor1 e tem a cor
+do codigo hexadecimal ai para usar seria tipo:
+
+h1{
+	color: var(--cor1);
+}
+
+-------------------------------------------
+
+CONFIGS GLOBAIS
+
+*{
+	margin: 0px;
+	paddding: 0px;
+}
+
+para mudar a config de qualquer elemento, sempre
+bom começar com essas para tirar as margens de tudo.
+
+-------------------------------------------
+
+
+SITES IMPORTANTES PARA CRIAR UM SITE
+
+
+ADOBE COLORS  ------ >> paletas de cores
+FONT NINJA //// GOOGLE FONTS  ------ >>> 
+PIXELS //// UNSPLASH -------->> SITES P IMGS SEM DIREITOS AUTORAIS
+GIMP  --->> EDITOR DE IMAGENS
+EMOJIPEDIA
+
+MOCKFLOW
+
+
+
+------------------------------------------------
+
+GOOGLE FONTS
+
+baixa uma fonte e pega o @import url('');
+
+coloca dentro do style
+
+ai depois no font family é so colocar o 'nome' que aparece no site
+
+------------------------------------------------
+
+BAIXAR FONTS
+
+@font-face {
+	font-family: 'nome'
+	src: url('nomedoarquivo') format();
+}
+
+dentro do url o nome do arquivo tem que ser exatamente igual e o
+
+format vai depender se é otf ou ttf
+
+tipos:
+
+	- opentype(otf)
+	- truetype(ttf)
+
+	- truetype-aat (Apple Advanced Typografh)
+
+geralmente coloca os arquivos dentro de uma pasta fontes
+
+ai no src é url('fontes/nome')
+
+---------------------------------------------------------------
+
+PLANEJAR ESTRUTURA DO SITE
+
+MOCKFLOW
+
+Codigos css 
+
+transition duration <segundos>  colocando isso no hover
+
+vai ter o efeito de passar o mouse e demorar algum tempo pra sair o efeito
+
+-------------------------------------------
+
+CONTEINER POSITION RELATIVE
+
+CONTEUDO POSITION ABSOLUTE
+
+LEFT: %;
+
+TOP %;
+
+PARA CENTRALIZAR VERTICALMENTE É 
+
+LEFT: 50%;
+
+TOP: 50%;
+
+TRANSFORM: TRANSLATE(-50%, -50%)
+
+POR QUE QUANDO COLOCA SO O LEFT E O TOP
+
+FICA O LEFT E O TOP DA CAIXA ENCOSTADA NO CANTO SUPERIOR ESQUERDO DO MEIO
+
+--------------------------------------------------
+
+RESPONSIVIDADE Imagem
+
+img{
+width: 100%}
+
+da pra usar o picture tambem
+
+posso dar uma classe p uma imagem
+
+e colocar um display: block;
+width: 50%;
+margin: auto;
+
+Ou seja, a imagem vai ficar centralizada e sempre 50% de largura
+
+-----------------------------------
+
+text-shadow:
+
+olhar no dev tools
+
+-----------------------------------
+
+CONFIGURAR TODOS ELEMENTOS DENTRO DE OUTRO
+
+NAO USAR O >
+
+EXEMPLO MAIN P{
+}
+
+vai mudar todos o P do main
+
+-------------------------------------
+
+LISTAS
+
+list-style-position: inside;
+
+em uma lista nao ordenada por exemplo as bolinhas vao para
+dentro do conteudo
+
+list-style-type: '\2714\00A0\00A0';
+
+2714 é o codigo do emoji(pegar no emojipedia)
+lembrar da barra invertida e o 00a0 é para dar um espaçamento
+a cada 00A0 tem um pouco de espaçamento
+
+---------------------------------------
+
+margem negativa lembrar!
+
+--------------------------------------FIM---------------------------------------------
+
+
+--------------------------------------MODULOCSS02---------------------------------------------
+
+IMAGEM DE FUNDO
+
+background-image: url('caminhodoarquivo');
+
+----------
+
+background-size      - >    tamanho da imagem do fundo width e height ex:
+
+background-size: 100px 100px;
+
+----------
+
+alterando o background size continua se repetindo, 
+porém com 100px cada imagem,
+para mudar isso:
+
+---------
+
+background-repeat: no-repeat;
+
+--------
+
+porque o padrao é background-repeat: repeat;
+
+--------
+
+outras formas:
+
+background-repeat: repeat-y; 	/  vai repetir no eixo X ( horizontal )
+	
+background-repeat: repeat-x;	/  vai repetir no eixo Y ( vertical )
+
+-----------------------------
+
+LEMBRANDO O PONTO DE PARTIDA DO BACKGROUND IMAGE É SEMPRE
+
+SUPERIOR ESQUERDO, PORÉM DA PARA ALTERAR.
+
+------------------------------
+
+BACKGROUND POSITION ( PONTO DE PARTIDA DA IMAGEM )
+
+
+background-position: lef top;	/	padrao ( canto superior esquerdo )
+
+background-position: center center;	/	centralizada total
+
+background-position: righ botom	/	canto inferior direito
+
+background-position: lef center	/	esquerda centralizada.
+
+------------------------------
+
+BACKGROUND SIZE
+
+por padrão é auto ( background-size: auto;)
+
+----
+
+existe o
+
+background-size: contain;
+
+-> que vai tentar mostrar toda a imagem 100%, porem vai criando os barras pretas laterais
+ou verticas porque tenta mostrar toda a imagem, porém
+
+-----
+
+exste o
+
+background-size: cover;
+
+-> que vai fazer caber toda a imagem porém corta um pouco da imagem. (MELHOR OPC)
+ 
+-------------------------------
+
+BACK GROUND ATTATCHMENT (vinculo)
+
+
+background-attatchment: scroll;	/	é o padrão!!
+
+mas para acabar com fundo preto
+
+background-attatchment: fixed;	/	o fundo vai ficar fixo!!!!!!!!!!!!!!!!
+
+
+
+--------------------------------
+
+SHORT HAND BACKGROUND
+
+color > image > position > repeat > [size] >  attatchment
+
+size não está funcionando então coloca
+
+background: color image position repeat attatchment;
+
+background-size: cover;
+
+
+-----------------------------------------------------------------------
+
+		       TABELAS
+
+tabelas simples
+
+hierarquia de tabela simples [
+
+TABLE  = TABELA
+
+	TABLE ROW   = LINHA DE TABELA
+
+		TABLE HEADER = CABEÇALHO DE TABELHA
+
+			TABLE DATA = DADO DE TABELA   ]
+
+A1	B1	C1
+
+A2	B2	C2
+
+A3	B3	C3
+
+
+table{
+	border-collapse: collapse;     -> o valor padrao é separadp
+}
+
+esse codigo border-collapse serve para agrupar os dados da tabela, tirar os espaçamentos entre as linhas e colunas
+----\\----
+
+alinhamento vertical das celulas
+
+td{
+vertical-align:top;
+	}
+--> o vertical align pode ser top middle e bottom <--
+
+Já  o alinhamento horizontal se usa o
+
+text-align.
+
+------------------------------
+
+Tabelas Grandes
+
+
+TABLE
+	CAPTION
+	THEAD
+		TR, TD, TH
+	TBODY
+		TR, TD, TH
+	TFOOT
+		TR, TD, TH
+
+
+dentro da tabela posso ter um tablehead
+um table body e
+um table foot
+e dentro de cada um eu posso ter
+a linha os valores e outros cabeçalhos
+
+--------------------------------------
+
+para os TH  os titulos das colunas ou das linhas
+
+pode ser <th scope="col">  PRA QUANDO OS DADOS
+APARECEM EM BAIXO DO TITULO ou seja em forma de coluna
+
+ou
+
+pode ser <th scope="row">	PRA QUANDO OS DADOS APARECEM DO
+LADO DO TITULO
+
+
+-----------------------------------
+
+EFEITO ZEBRADO EXEMPLO
+
+tbody > tr:nth-child(2n) {
+background-color: grey;
+}
+
+oque ta acontecendo é que para todas as linhas do body que são pares
+vao ficar da cor cinza, se o fundo da pagina for branca nem precisa
+configurar as linhas impares!
+
+--//--
+
+é usando uma pseudo-classe que é
+
+:nth-child
+
+o 2n é para se for par
+o 2n-1 é para se for as impares
+
+
+------------------------------
+
+PRA O CABEÇALHO FICAR FIXO QUANDO ROLA P BAIXO
+
+COLOCAR O POSITION DA TABELA RELATIVO
+
+E DENTRO DO TH DA TR DO THEAD COLOCAR 
+
+
+
+thead > tr > th {
+
+	position: sticky;
+
+	e pra colar
+
+	top: 0;    <--- na vdd bota -1px pq fica um espacinho sobrando.
+
+	e pra ficar com o fundo da mesma cor do thead
+
+	background-color;
+}
+
+
+--------------------------------
+
+MESCLAGEM DE CELULA
+
+para uma celula ocupar + 1 de uma coluna ou seja
+expandir lateralmente  usar o colspan
+
+para uma celula ocupar + 1 linha ou seja
+expandir para baixo usar o rowspan
+
+ex:
+
+<td colspan="2">A</td>
+
+a ficaria
+
+|    A    | C |
+
+| D | E | F |
+
+-----------------------------
+
+--------------------------------------FIM---------------------------------------------
+
+
+-------------------------------------------------CODIGOSCSS------------------------------------------------------
+
+Codigos css: 
+
+letter-spacing  --->> p dar um espaçamento horizontal entre as letras!
+
+
+transition duration <segundos>  colocando isso no hover
+
+vai ter o efeito de passar o mouse e demorar algum tempo pra sair o efeito
+
+-------------------------------------------
+
+CONTEINER POSITION RELATIVE
+
+CONTEUDO POSITION ABSOLUTE
+
+LEFT: %;
+
+TOP %;
+
+PARA CENTRALIZAR VERTICALMENTE É 
+
+LEFT: 50%;
+
+TOP: 50%;
+
+TRANSFORM: TRANSLATE(-50%, -50%)
+
+POR QUE QUANDO COLOCA SO O LEFT E O TOP
+
+FICA O LEFT E O TOP DA CAIXA ENCOSTADA NO CANTO SUPERIOR ESQUERDO DO MEIO
+
+--------------------------------------------------------
+
+FORMULÁRIO
+
+
+
+
+--------------------------------------------------------
+
+
+--------------------------------------FIM---------------------------------------------
