@@ -1,0 +1,175 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+/*font-family: 'Roboto Condensed', sans-serif;
+  #DC853D
+*/
+
+
+
+/*Configs gerais*/
+
+:root{
+    --fonteDestaque:'Roboto Condensed', sans-serif;
+    --cor01: #FF6600;
+    --cor02: #C13B00;
+    --cor03: #5E6D70;
+    --cor04: #424E4F;
+    --cor05: #1B1D1E;
+}
+
+
+body{
+background-image: linear-gradient(45deg, var(--cor01), var(--cor02));
+background-repeat: no-repeat;
+height: 100vh;
+}
+
+
+/*HEADER*/
+
+header{
+    margin-top: -1.8%;
+    margin-left: -1.8%;
+    margin-right: -1.8%;
+    background-color: white;
+    padding-top: 3.1%;
+    padding-bottom: 1.8%;
+    box-shadow: 0px 1px 6px 1px rgba(0, 0, 0, 0.651);
+    font-size: 1.65vh;
+    
+}
+
+header nav{
+    font-family: var(--fonteDestaque);
+    font-weight: lighter;
+    text-align: center;
+    top: 0px;
+}
+
+nav a{
+    
+    margin-left: 2%;
+    margin-right: 2%;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: 300;
+}
+
+nav a:hover{
+    color: var(--cor01);
+}
+
+#nav-login{
+    color: var(--cor01);
+}
+
+
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(45deg, var(--cor01), var(--cor02));
+    }
+    
+    
+    .box{
+    font-family: var(--fonteDestaque);
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    background-color: white;
+    padding: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.089);
+    border-radius:5px;
+    height: 370px;
+    min-width: 320px;
+    max-width: 400px;
+    color: white;
+    box-shadow: 5px 6px 5px 0px rgba(0, 0, 0, 0.349);
+    }
+    
+    
+    @media screen and (max-width:945px) {
+    .box{
+    width:240px;
+    
+    
+    }
+        
+    }
+    
+    fieldset{
+    border: 1px solid rgb(0, 0, 0);
+    
+    }
+    
+    legend{
+    border:1px solid black;
+    padding:12px 35px 12px 35px;
+    text-align: center;
+    background-image: linear-gradient(to right, var(--cor03), var(--cor05));
+    border-radius: 8px;
+    
+    }
+    
+    .inputbox{
+    position: relative;
+    color: rgb(0, 0, 0);
+    }
+    .inputuser{
+    background:none;
+    border:none;
+    border-bottom: 0.4px solid rgba(0, 0, 0, 0.534);
+    outline: none;
+    color:rgba(0, 0, 0, 0.527);
+    font-size: 15px;
+    width: 100%;
+    }
+    
+    .labelinput{
+    position: absolute;
+    top:0px;
+    left: 0px;
+    pointer-events: none;
+    transition: 0.5s;
+    }
+    
+    .inputuser:focus ~ .labelinput,.inputuser:valid ~ .labelinput{
+    top:-20px;
+    font-size: 12px;
+    color:rgba(0, 0, 0, 0.692);
+    }
+    
+    
+    #submit{
+    background-image: linear-gradient(to right, var(--cor03), var(--cor05));
+    width: 100%;
+    border:none;
+    padding: 15px;
+    color:rgb(255, 255, 255);
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 10px;
+    
+    }
+    
+    
+    #submit:hover{
+    background-image: linear-gradient(90deg, var(--cor05), var(--cor03));
+    color:black;
+    }
+    
+#novo{
+    padding-left: 50px;
+    color: black;
+    margin-bottom:15px;
+}    
+
+.box a{
+    color: var(--cor01);
+}
+
+.box a:hover{
+    color: var(--cor05);
+}

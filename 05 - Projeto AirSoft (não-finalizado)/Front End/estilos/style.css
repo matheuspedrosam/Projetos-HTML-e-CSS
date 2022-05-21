@@ -1,0 +1,265 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+/*font-family: 'Roboto Condensed', sans-serif;
+  #DC853D
+*/
+
+
+
+/*Configs gerais*/
+
+:root{
+    --fonteDestaque:'Roboto Condensed', sans-serif;
+    --cor01: #FF6600;
+    --cor02: #C13B00;
+    --cor03: #5E6D70;
+    --cor04: #424E4F;
+    --cor05: #1B1D1E;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: white;
+    font-family: var(--fonteDestaque);
+}
+
+main{
+    max-width: 1920px;
+    min-width: 300px;
+}
+
+
+
+
+    /*HEADER*/
+
+
+header{
+    width: 100%;
+    background-color: white;
+    padding: 35px 0px 35px 0px;
+}
+
+header nav{
+    text-align: center;
+    top: 0px;
+}
+
+nav a{
+    
+    margin-left: 2%;
+    margin-right: 2%;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: 300;
+}
+
+nav a:hover{
+    color: var(--cor01);
+}
+
+.nav-home{
+    color: var(--cor01);
+}
+
+
+
+
+    /*Primeira Section*/
+
+.section-principal{
+    background-image: url(../imagens/Foto-Gabriel-Main.JPG);
+    background-size: 100vw;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding-bottom: 5%;
+    padding-top: 12px;
+    position: relative;
+    height: 500px;
+    
+
+}
+
+#logo{
+    width: 100px;
+    height: 100px;
+}
+
+.section-principal img{
+    margin-top: 2%;
+    margin-left: 15%;
+}
+
+
+.section-principal h1{
+    text-align: center;
+    font-size: 25px;
+    color: white;
+    font-weight: 400;
+    width: 290px;
+    margin: auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 15%);
+    padding: 5px 0px 5px 5px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 25px;
+    box-shadow: inset 0px 0px 3px 1px rgb(255 255 255 / 59%);
+    background-image: linear-gradient(var(--cor01), var(--cor02));
+
+}
+
+
+
+.section-principal h1:hover{
+    background-image: linear-gradient(90deg, var(--cor01), var(--cor02));
+    transition-duration: 0.5s;
+    padding-left: 1%;
+    padding-right: 0.6%;
+}
+
+.section-principal h1:active{
+    color: var(--cor05);
+}
+
+
+
+    /*SECTION 2*/
+
+.section2{
+    padding-top: 70px;
+    text-align: center;
+}
+
+.section2 h1{
+    font-weight: lighter;
+    font-size: 2.2em;
+    padding: 5px;
+    text-align: center;
+    color: var(--cor01);
+    padding-bottom: 40px;
+    
+}
+
+.section2 p{
+    max-width: 48%;
+    margin: auto;
+    text-align: center;
+}
+
+.section2 a{
+    display: inline-block;
+    
+    margin-top: 15px;
+    
+}
+
+
+
+/* SECTION 3 COM BACKGROUND IMAGE */
+
+.section3-imagem{
+    background-image: url(../imagens/section2.jpg);
+    width: 100%;
+    height: 250px;
+    margin-top: 60px;
+    background-position: center center;
+    background-size: cover;
+    margin-bottom: 60px;
+    
+}
+
+
+/* SECTION 4 RESERVAR HORÁRIO */
+
+.section4-ReservaHorario{
+    margin-top: 60px;
+    margin-bottom: 60px;
+    padding: 20px;
+
+}
+
+.section4-ReservaHorario h2{
+    color: var(--cor01);
+    text-decoration: underline;
+
+}
+
+.section4-ReservaHorario ul{
+    margin-left: 20px;
+}
+
+
+
+/*SECTION 5 BACKGROUND IMAGE*/
+
+.section5-imagem{
+    background-image: url(../imagens/section3.jpg);
+    width: 100%;
+    height: 250px;
+    background-size: cover;
+    background-position: top center;
+}
+
+
+
+/*SECTION 6 VALORES*/
+
+.section6-valores{
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+table{
+    padding: 5px;
+    border-collapse: collapse;
+    min-width: 400px;
+    max-width: 600px;
+    margin: auto;
+    color: black;
+    height: 300px;
+}
+
+caption{
+    font-size: 20px;
+    background-image: linear-gradient(90deg, var(--cor01), var(--cor02));
+    font-weight: 400;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-radius: 3px 3px 0px 0px;
+}
+
+td,th{
+    border: 1px solid black;
+}
+
+tbody > tr:nth-child(2n-1){
+    background-color: #5e6d7094;
+}
+
+tbody tr{
+    text-align: center;
+}
+
+
+
+
+/*FOOTER*/
+
+footer{
+    background-color: var(--cor03);
+    height: 500px;
+}
+
+footer iframe{
+    margin-top: 15px;
+    margin-left: 15px;
+
+}
