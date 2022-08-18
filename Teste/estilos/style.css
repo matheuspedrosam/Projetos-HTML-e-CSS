@@ -1,0 +1,77 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+    background-color: rgb(230, 248, 250);
+    color: rgb(128, 0, 128);
+}
+
+header {
+    margin-top: 10px;
+}
+
+header h1{
+    font-size: 20px;
+    text-align: center;
+}
+
+header p{
+    color: rgba(128, 0, 128, 0.658);
+    font-size: 12px;
+    text-align: center;
+}
+
+fieldset{
+    padding: 10px;
+    margin-top: 20px;
+    border: none;
+}
+
+label{
+    font-size: 6vw;
+    margin-bottom: 5px;
+}
+
+p{
+    font-size: 6vw;
+    text-align: left;
+    font-weight: bold;
+}
+
+#campo1 input{
+    border: 1px solid grey;
+    border-radius: 5px;
+    width: 80%;
+}
+
+#campo1 label{
+    font-weight: bold;
+    display: block;
+    margin: 5px 0px 5px 0px;
+}
+
+
+#campo3 label{
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+#campo3 select{
+    color: grey;
+    border: 1px solid grey;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px grey;
+}
+
+#campo5 label{
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+}
