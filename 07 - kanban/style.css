@@ -52,7 +52,7 @@ main{
     flex: 0.5;
     max-width: 300px;
     min-height: 100vh;
-    max-height: 100vw;
+    max-height: 100vh;
 }
 
 #logo-container{
@@ -225,7 +225,7 @@ main{
     cursor: pointer;
 }
 
- /* Platform Launch  TASKS */
+/* Platform Launch  TASKS */
 
 #tasks-container{
     display: flex;
@@ -289,7 +289,20 @@ main{
 }
 
 #add-tasks{
+    
+}
 
+@media (max-width: 950px){
+    .tasks{
+        max-width: 150px;
+    }
+    
+    .tasks-itens{
+        font-size: 1.5vw;
+        padding: 10px;
+        min-width: 100px;
+        max-width: 150px;
+    }
 }
 
 
@@ -316,16 +329,6 @@ main{
         padding: 10px;
         
     }
-    
-    .tasks{
-        max-width: 300px;
-    }
-    
-    .tasks-itens{
-        padding: 30px;
-        min-width: 100px;
-        max-width: 300px;
-    }
 }
 
 @media (max-width: 450px){
@@ -342,6 +345,7 @@ main{
         padding: 10px;
         min-width: 100px;
         max-width: 100px;
+        font-size: 1em;
     }
 
     .tasks-itens h3{
