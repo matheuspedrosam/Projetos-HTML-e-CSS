@@ -9,7 +9,7 @@
         body{
             font-family: Arial, Helvetica, sans-serif;
             color: rgb(0, 0, 0);
-            background-image: linear-gradient(90deg, #2A5E53, #4DAB96, #64DEC3, #ABE3D7);
+            background-image: linear-gradient(-45deg, #C9D6FF, #E2E2E2);
         }
         main{
             text-align: center;
@@ -17,8 +17,7 @@
             max-width: 1200px;
         }
         h1{
-            text-shadow: 1px 1px 2px black;
-            color: white;
+            color: rgba(0, 0, 0, 0.568);
             margin-left: 14px;
             background-color: rgba(240, 248, 255, 0.39);
             border-radius: 20px;
@@ -26,17 +25,46 @@
         p{
             font-size: 14px;
         }
-        img{
-            width: 45%;
-            display: inline-block;
-            border-radius: 10px;
-            margin: 10px;
-            box-shadow: -3px -3px 4px 0px #0000005e;
+
+        .flex-container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
         }
-        img:hover{
-            transform: translate(-3px, -3px);
-            box-shadow: 0px 0px 20px white;
-            transition: transform 0.5s;
+
+        .flex-container .itens{
+            height: 280px;
+            max-width: 300px;
+            border-radius: 10px 10px 0px 0px;
+            box-shadow: 0px 0px 8px #0000005e;
+            background-color: aliceblue;
+            display: flex;
+            color: rgba(0, 0, 0, 0.568);
+            flex-direction: column;
+            gap: 20px 0px;
+            font-size: 1.25em;
+            border-bottom: 8px solid #C9D6FF;
+        }
+
+        .itens:hover{
+            transform: translate(0px, -4px);
+            transition: transform 0.3s;
+            border-bottom: 8px solid aquamarine;
+        }
+
+        img{
+            display: block;
+            width: 100%;
+            border-radius: 10px 10px 0px 0px;
+        }
+
+        @media (max-width: 550px){
+            .flex-container .itens{
+                width: 150px;
+                height: 190px;
+            }
         }
     </style>
 </head>
@@ -44,13 +72,62 @@
     <main>
         <h1>Escolha um Exercício para visualizar</h1>
         
-        <a target="_blank" href="01 - Site Basico Videos Youtube/index.html"><img src="https://user-images.githubusercontent.com/99772255/169634613-be947f81-65aa-474e-9e86-126e1c438010.png" alt="Site Basico"></a>
-        <a target="_blank" href="x - Estatistica/index.html"><img src="https://user-images.githubusercontent.com/99772255/185810724-48d37231-983d-4a82-a83c-d577fc745aea.png" alt="Site Estatistica"></a>
-        <a target="_blank" href="05 - Formulario/index.html"><img src="https://user-images.githubusercontent.com/99772255/185262977-880ab204-1952-44a8-9164-40867f91eda7.png" alt="Site Formulário"></a>
-        <a target="_blank" href="02 - Site Android/index.html"><img src="https://user-images.githubusercontent.com/99772255/169634555-092e57eb-f171-43fe-a26e-8c425935a7a0.png" alt="Site Android"></a> <br>
-        <a target="_blank" href="03 - Projeto Cordel/index.html"><img src="https://user-images.githubusercontent.com/99772255/169634869-2fbb396f-a33b-45df-83a2-0c11646e91f7.gif" alt="Site Projeto Cordel"></a>
-        <a target="_blank" href="04 - Site Balle Bot/index.html"><img src="https://user-images.githubusercontent.com/99772255/169634985-2d0a8a8c-191f-4c69-8eeb-34fddd392a23.png" alt="Site Balle Bot"></a>
-        <a target="_blank" href="06 - Flexblog/index.html"><img src="https://user-images.githubusercontent.com/99772255/187099254-921fd24c-55bb-4952-a271-9e5dc4765516.png" alt="Site Flexblog"></a>
+        <div class="flex-container">
+            <div class="itens">
+                <a target="_blank" href="01 - Site Basico Videos Youtube/index.html">
+                    <img src="https://user-images.githubusercontent.com/99772255/169634613-be947f81-65aa-474e-9e86-126e1c438010.png" alt="Site Basico">
+                </a>
+                <h3>Site basico</h3>
+            </div>
+            <div class="itens"> 
+                <a target="_blank" href="x - Estatistica/index.html">
+                    <img src="https://user-images.githubusercontent.com/99772255/185810724-48d37231-983d-4a82-a83c-d577fc745aea.png" alt="Site Estatistica">
+                </a>
+                <h3>Estatística</h3>
+            </div>
+            <div class="itens"> 
+                <a target="_blank" href="05 - Formulario/index.html">
+                    <img src="https://user-images.githubusercontent.com/99772255/185262977-880ab204-1952-44a8-9164-40867f91eda7.png" alt="Site Formulário">
+                </a>
+                <h3>Formulário</h3>
+            </div>
+            <div class="itens">
+                <a target="_blank" href="02 - Site Android/index.html">
+                    <img src="https://user-images.githubusercontent.com/99772255/169634555-092e57eb-f171-43fe-a26e-8c425935a7a0.png" alt="Site Android">
+                </a>
+                <h3>Site android</h3>
+            </div>
+            <div class="itens">
+                <a target="_blank" href="03 - Projeto Cordel/index.html">
+                    <img src="https://user-images.githubusercontent.com/99772255/169634869-2fbb396f-a33b-45df-83a2-0c11646e91f7.gif" alt="Site Projeto Cordel">
+                </a>
+                <h3>Efeito Parallax</h3>
+            </div>
+            <div class="itens">
+                <a target="_blank" href="04 - Site Balle Bot/index.html">
+                    <img src="https://user-images.githubusercontent.com/99772255/169634985-2d0a8a8c-191f-4c69-8eeb-34fddd392a23.png" alt="Site Balle Bot">
+                </a>
+                <h3>Balle Bot</h3>
+            </div>
+            <div class="itens">
+                <a target="_blank" href="06 - Flexblog/index.html">
+                    <img src="https://user-images.githubusercontent.com/99772255/187099254-921fd24c-55bb-4952-a271-9e5dc4765516.png" alt="Site Flexblog">
+                </a>
+                <h3>FlexBlog</h3>
+            </div>
+            <div class="itens">
+                <a target="_blank" href="06 - Flexblog/index.html">
+                    <img src="https://user-images.githubusercontent.com/99772255/188302509-b814f7fb-c365-42be-86a0-17b50d470109.png" alt="Site Kanban">
+                </a>
+                <h3>Kanban</h3>
+            </div>
+            <div class="itens">
+                <a target="_blank" href="08 - login/index.html">
+                    <img src="https://user-images.githubusercontent.com/99772255/188302432-fde9741c-d5f9-4a9c-8459-46e0a44f76be.png" alt="Site Login">
+                </a>
+                <h3>Login Responsivo</h3>
+            </div>
+        </div>
         <code>
             <p>
                 Vale ressaltar que esses exercícios foram realizados de acordo com meu progresso de estudos, sendo assim
