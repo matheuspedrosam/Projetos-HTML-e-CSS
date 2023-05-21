@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(0, 0, 0);
+    background-image: linear-gradient(-45deg, #C9D6FF, #E2E2E2);
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+h1{
+    color: rgba(0, 0, 0, 0.568);
+    padding: 0px 20px;
+    border-radius: 5px;
+    background-color: rgba(240, 248, 255, 0.39);
+    max-width: 500px;
+    text-align: center;
+}
+
+.html{
+    color: #ffa6009a;
+}
+
+.css{
+    color: rgba(0, 0, 255, 0.473);
+}
+
+.flex-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-top: 40px;
+    gap: 20px;
+    max-width: 500px;
+}
+
+.flex-container .itens{
+    width: 100%;
+    font-size: 1.25em;
+    background-color: aliceblue;
+    color: rgba(0, 0, 0, 0.568);
+    box-shadow: 0px 0px 8px #0000005e;
+    border-radius: 0px 10px 10px 0px;
+    border-left: 8px solid #C9D6FF;
+    cursor: pointer;
+}
+
+.flex-container .itens a{
+    text-decoration: none;
+    color: black;
+}
+
+.flex-container .itens a div{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.flex-container .itens a div img{
+    display: block;
+    width: 160px;
+}
+
+.flex-container .itens a div h3{
+    width: 100%;
+    text-align: center;
+    padding-right: 5px;
+}
+
+
+
+.itens:hover{
+    transform: translate(0px, -4px);
+    transition: transform 0.3s;
+    border-left: 8px solid aquamarine;
+}
+
+p{
+    font-size: 14px;
+    text-align: center;
+}
+
+@media screen and (max-width: 350px) {
+    .flex-container .itens a div{
+        gap: 10px;
+    }
+
+    .flex-container .itens a div h3{
+        width: auto;
+        font-size: 16px;
+    }
+
+    .flex-container .itens a div img{
+        width: 120px;
+    }
+}
+
+
+
+@media screen and (max-width: 500px) {
+    h1{
+        font-size: 26px;
+    }
+
+    .flex-container{
+        gap: 10px;
+    }
+}

@@ -4,128 +4,94 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercícios em Html e Css</title>
-    <style>
-        body{
-            font-family: Arial, Helvetica, sans-serif;
-            color: rgb(0, 0, 0);
-            background-image: linear-gradient(-45deg, #C9D6FF, #E2E2E2);
-        }
-        main{
-            text-align: center;
-            margin: auto;
-            max-width: 1200px;
-        }
-        h1{
-            color: rgba(0, 0, 0, 0.568);
-            margin-left: 14px;
-            background-color: rgba(240, 248, 255, 0.39);
-            border-radius: 20px;
-        }
-        p{
-            font-size: 14px;
-        }
-
-        .flex-container{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            gap: 20px;
-        }
-
-        .flex-container .itens{
-            height: 280px;
-            max-width: 300px;
-            border-radius: 10px 10px 0px 0px;
-            box-shadow: 0px 0px 8px #0000005e;
-            background-color: aliceblue;
-            display: flex;
-            color: rgba(0, 0, 0, 0.568);
-            flex-direction: column;
-            gap: 20px 0px;
-            font-size: 1.25em;
-            border-bottom: 8px solid #C9D6FF;
-        }
-
-        .itens:hover{
-            transform: translate(0px, -4px);
-            transition: transform 0.3s;
-            border-bottom: 8px solid aquamarine;
-        }
-
-        img{
-            display: block;
-            width: 100%;
-            border-radius: 10px 10px 0px 0px;
-        }
-
-        @media (max-width: 550px){
-            .flex-container .itens{
-                width: 150px;
-                height: 190px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="imagens/favicon.png" type="image/x-icon">
+    <title>Exercícios Html/Css</title>
 </head>
 <body>
     <main>
-        <h1>Escolha um Exercício para visualizar</h1>
+        <h1>Escolha um Exercício de <span class="html">HTML</span>/<span class="css">CSS</span> para visualizar</h1>
         
         <div class="flex-container">
             <div class="itens">
                 <a target="_blank" href="01 - Site Basico Videos Youtube/index.html">
-                    <img src="https://user-images.githubusercontent.com/99772255/169634613-be947f81-65aa-474e-9e86-126e1c438010.png" alt="Site Basico">
+                    <div>
+                        <img src="imagens/Site Basico.png" alt="Site Basico">
+                        <h3>Site basico</h3>
+                    </div>
                 </a>
-                <h3>Site basico</h3>
             </div>
             <div class="itens"> 
-                <a target="_blank" href="05 - Formulario/index.html">
-                    <img src="https://user-images.githubusercontent.com/99772255/185262977-880ab204-1952-44a8-9164-40867f91eda7.png" alt="Site Formulário">
+                <a target="_blank" href="02 - Formulario/index.html">
+                    <div>
+                        <img src="imagens/Formulario.png" alt="Site Formulário">
+                        <h3>Formulário</h3>
+                    </div>
                 </a>
-                <h3>Formulário</h3>
-            </div>
-            <div class="itens">
-                <a target="_blank" href="02 - Site Android/index.html">
-                    <img src="https://user-images.githubusercontent.com/99772255/169634555-092e57eb-f171-43fe-a26e-8c425935a7a0.png" alt="Site Android">
-                </a>
-                <h3>Site android</h3>
             </div>
             <div class="itens">
                 <a target="_blank" href="03 - Projeto Cordel/index.html">
-                    <img src="https://user-images.githubusercontent.com/99772255/169634869-2fbb396f-a33b-45df-83a2-0c11646e91f7.gif" alt="Site Projeto Cordel">
+                    <div>
+                        <img src="imagens/Parallax.gif" alt="Site Projeto Cordel">
+                        <h3>Efeito Parallax</h3>
+                    </div>
                 </a>
-                <h3>Efeito Parallax</h3>
             </div>
             <div class="itens">
-                <a target="_blank" href="04 - Site Balle Bot/index.html">
-                    <img src="https://user-images.githubusercontent.com/99772255/169634985-2d0a8a8c-191f-4c69-8eeb-34fddd392a23.png" alt="Site Balle Bot">
+                <a target="_blank" href="04 - Site Android/index.html">
+                    <div>
+                        <img src="imagens/Android.png" alt="Site Android">
+                        <h3>Site Android</h3>
+                    </div>
                 </a>
-                <h3>Balle Bot</h3>
             </div>
             <div class="itens">
-                <a target="_blank" href="06 - Flexblog/index.html">
-                    <img src="https://user-images.githubusercontent.com/99772255/187099254-921fd24c-55bb-4952-a271-9e5dc4765516.png" alt="Site Flexblog">
+                <a target="_blank" href="05 - Figma Codelandia/index.html">
+                    <div>
+                        <img src="imagens/Codelandia.png" alt="Figma Codelandia">
+                        <h3>Figma Codelândia</h3>
+                    </div>
                 </a>
-                <h3>FlexBlog</h3>
             </div>
             <div class="itens">
-                <a target="_blank" href="07 - kanban/index.html">
-                    <img src="https://user-images.githubusercontent.com/99772255/188302509-b814f7fb-c365-42be-86a0-17b50d470109.png" alt="Site Kanban">
+                <a target="_blank" href="06 - Site Balle Bot/index.html">
+                    <div>
+                        <img src="imagens/BalleBot.png" alt="Site Balle Bot">
+                        <h3>Balle Bot</h3>
+                    </div>
                 </a>
-                <h3>Kanban</h3>
             </div>
             <div class="itens">
-                <a target="_blank" href="08 - login/index.html">
-                    <img src="https://user-images.githubusercontent.com/99772255/188302432-fde9741c-d5f9-4a9c-8459-46e0a44f76be.png" alt="Site Login">
+                <a target="_blank" href="07 - Flexblog/index.html">
+                    <div>
+                        <img src="imagens/FlexBlog.png" alt="Site Flexblog">
+                        <h3>FlexBlog</h3>
+                    </div>
                 </a>
-                <h3>Login Responsivo</h3>
             </div>
             <div class="itens">
-                <a target="_blank" href="09 - beUty/index.html">
-                    <img src="https://user-images.githubusercontent.com/99772255/189008961-50b81b49-1fb9-4195-8d98-35462564ee9b.png" alt="Site beUty">
+                <a target="_blank" href="08 - kanban/index.html">
+                    <div>
+                        <img src="imagens/Kanban.png" alt="Site Kanban">
+                        <h3>Kanban</h3>
+                    </div>
                 </a>
-                <h3>BeUty</h3>
+            </div>
+            <div class="itens">
+                <a target="_blank" href="09 - login/index.html">
+                    <div>
+                        <img src="imagens/login.png" alt="Site Login">
+                        <h3>Login Responsivo</h3>
+                    </div>
+                </a>
+            </div>
+            <div class="itens">
+                <a target="_blank" href="10 - beUty/index.html">
+                    <div>
+                        <img src="imagens/BeUty.png" alt="Site beUty">
+                        <h3>BeUty</h3>
+                    </div>
+                </a>
             </div>
         <code>
             <p>
