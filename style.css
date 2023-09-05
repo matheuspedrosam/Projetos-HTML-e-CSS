@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -5,115 +7,98 @@
 }
 
 body{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
     color: rgb(0, 0, 0);
-    background-image: linear-gradient(-45deg, #C9D6FF, #E2E2E2);
+    background-color: rgba(0, 0, 0, 0.05);
 }
 
-main{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: auto;
-    max-width: 1200px;
-    padding: 20px;
-}
-
-h1{
-    color: rgba(0, 0, 0, 0.568);
-    padding: 0px 20px;
-    border-radius: 5px;
-    background-color: rgba(240, 248, 255, 0.39);
-    max-width: 500px;
-    text-align: center;
-}
-
-.html{
-    color: #ffa6009a;
-}
-
-.css{
-    color: rgba(0, 0, 255, 0.473);
-}
-
-.flex-container{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    margin-top: 40px;
-    gap: 20px;
-    max-width: 500px;
-}
-
-.flex-container .itens{
-    width: 100%;
-    font-size: 1.25em;
-    background-color: aliceblue;
-    color: rgba(0, 0, 0, 0.568);
-    box-shadow: 0px 0px 8px #0000005e;
-    border-radius: 0px 10px 10px 0px;
-    border-left: 8px solid #C9D6FF;
-    cursor: pointer;
-}
-
-.flex-container .itens a{
+a{
     text-decoration: none;
     color: black;
 }
 
-.flex-container .itens a div{
-    display: flex;
-    align-items: center;
-    gap: 20px;
+a:visited, a:active{
+    color: black !important;
 }
 
-.flex-container .itens a div img{
+img{
     display: block;
-    width: 160px;
-}
-
-.flex-container .itens a div h3{
     width: 100%;
+}
+
+#parallax{
+    width: 90%;
+    margin: auto;
+}
+
+#parallax-img-container{
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+/* HEADER */
+
+header{
     text-align: center;
-    padding-right: 5px;
+}
+
+#header-container{
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+
+/* MAIN */
+
+.grid-container{
+    max-width: 1200px;
+    min-height: 84vh;
+    margin: auto;
+    padding: 20px;
+    display: grid;
+    align-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.grid-itens{
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.15);
+    transition: .3s ease-in-out;
+    /* border-radius: 5px; */
+}
+
+.grid-itens:hover{
+    position: relative;
+    top: -2px;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.35);
+}
+
+.description-container{
+    min-height: 50px;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    background-color: white;
 }
 
 
 
-.itens:hover{
-    transform: translate(0px, -4px);
-    transition: transform 0.3s;
-    border-left: 8px solid aquamarine;
+/* FOOTER */
+
+footer{
+    padding: 20px;
 }
 
-p{
-    font-size: 14px;
+footer p{
     text-align: center;
 }
 
-@media screen and (max-width: 350px) {
-    .flex-container .itens a div{
-        gap: 10px;
-    }
 
-    .flex-container .itens a div h3{
-        width: auto;
-        font-size: 16px;
-    }
+/* MEDIA */
 
-    .flex-container .itens a div img{
-        width: 120px;
-    }
-}
-
-
-
-@media screen and (max-width: 500px) {
-    h1{
-        font-size: 26px;
-    }
-
-    .flex-container{
-        gap: 10px;
+@media screen and (max-width: 500px){
+    header h1{
+        font-size: 23px;
     }
 }

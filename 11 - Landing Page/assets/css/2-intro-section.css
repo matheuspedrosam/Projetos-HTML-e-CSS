@@ -1,0 +1,16 @@
+#intro{
+    display: grid;
+}
+
+.intro-container{
+    display: grid;
+    grid-template-columns: 1.5fr minmax(200px, 2fr);
+    align-items: center;
+    gap: 30px;
+}
+
+#intro h1{
+    letter-spacing: 2px;
+    margin-bottom: 50px;
+    line-height: 70px;
+}

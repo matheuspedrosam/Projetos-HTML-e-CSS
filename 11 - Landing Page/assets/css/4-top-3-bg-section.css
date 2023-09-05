@@ -1,0 +1,40 @@
+.top-3-bg-container{
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+
+.top-3-bg-conteudo{
+    display: grid;
+    gap: 170px;
+}
+
+.top3-bg-grid-container{
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.numero{
+    font-size: 30px;
+    margin-left: 60px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.um::before, .dois::before, .tres::before{
+    content: "1";
+    position: absolute;
+    left: -55px;
+    top: -50px;
+    font-size: 80px;
+    transform: rotate(10deg);
+}
+
+.dois::before{
+    content: "2";
+}
+
+.tres::before{
+    content: "3";
+}

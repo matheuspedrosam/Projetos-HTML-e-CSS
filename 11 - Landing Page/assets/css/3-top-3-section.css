@@ -1,0 +1,19 @@
+.top-3-container{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+} 
+
+.top-3-container div{
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+}
+
+.top-3-container div h1{
+    margin-bottom: 60px;
+}
+
+.top-3-container div p + p{
+    margin-top: 30px;
+}

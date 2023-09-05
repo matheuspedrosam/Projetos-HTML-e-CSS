@@ -1,0 +1,19 @@
+header{
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    z-index: 1;
+}
+
+.header-container{
+    background-color: white;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-container nav ul{
+    display: flex;
+    gap: 30px;
+}

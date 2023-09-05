@@ -1,0 +1,37 @@
+.gallery-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 50px;
+}
+
+.gallery-container h1{
+    margin-bottom: 20px;
+}
+
+.gallery-grid-container{
+    display: grid;
+    align-content: end;
+    gap: 30px;
+    grid-template-columns: repeat(3, minmax(auto, 1fr));
+}
+
+.gallery-grid-container:nth-child(1), .gallery-grid-container:nth-child(2), .gallery-grid-container:nth-child(3){
+    align-self: flex-end;
+}
+
+.gallery-grid-container:nth-child(4), .gallery-grid-container:nth-child(5), .gallery-grid-container:nth-child(6){
+    align-self: flex-start;
+}
+
+.gallery-grid-container div{
+    overflow: hidden;
+}
+
+.gallery-grid-container img{
+    transition: .3s ease-in;
+}
+
+.gallery-grid-container img:hover{
+    transform: scale(115%) rotate(5deg);
+}

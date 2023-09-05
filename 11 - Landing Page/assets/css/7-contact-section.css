@@ -1,0 +1,54 @@
+.grid-contact-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin-top: 60px;
+}
+
+.grid-contact-container h1{
+    margin-bottom: 50px;
+}
+
+.contact-svg-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-svg-container svg{
+    width: 80%;
+}
+
+
+/* Form */
+
+.grid-contact-form-container{
+    margin-top: 140px;
+    display: grid;
+    grid-template-columns: 1.25fr 1fr;
+    gap: 20px;
+}
+
+.grid-contact-form-container div label{
+    display: block;
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+::placeholder{
+    color: lightgray;
+}
+
+.grid-contact-form-container div input, textarea{
+    width: 100%;
+    padding: 18px;
+    font-size: 25px;
+}
+
+#email{
+    grid-column: 1 / span 2;
+}
+
+#mensagem{
+    grid-column: 1 / span 2;
+}
